@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-black navbar bg-black" style="background-color: #1c2025;">
+      <span class="navbar-brand text-info">
+        <app-logo></app-logo>
+        Antonio firebase
+      </span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon text-info">...</span>
+  </button> 
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+      </li>
+      <li class="nav-item" *ngIf="auth.user != null">
+        <a class="nav-link btn-link" (click)="auth.cerrarSesion()">Salir {{auth.user}}</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

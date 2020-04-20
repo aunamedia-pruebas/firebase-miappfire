@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pruebas-antonio1": {
+      "hosting": {
+        "miappfire": [
+          "pruebas-antonio1"
+        ]
+      }
+    }
+  }
+}
